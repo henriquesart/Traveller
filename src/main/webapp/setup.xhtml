@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+
+<ui:composition template="template.xhtml">
+	<ui:define name="content">
+
+		<h:form>
+			<div class="p-field p-grid infocard">
+
+				<h1 class="h1title">Inscrição</h1>
+				<h4 class="h4title">Insira suas informações conforme solicitado
+					para realizar seu cadastro.</h4>
+
+				<p:outputLabel value="Nome:" class="p-col-fixed" />
+
+				<div class="p-col inputinfo">
+					<p:inputText id="name" type="text" value="#{setupBean.setup.nome}"
+						required="true" class="inputinfo" validatorMessage="Nome inválido">
+						<f:validateLength maximum="255" minimum="2" />
+						<f:ajax event="blur" render="messages" />
+					</p:inputText>
+				</div>
+
+				<p:outputLabel value="CPF:" class="p-col-fixed" />
+
+				<div class="p-col inputinfo">
+					<p:inputText id="cpf" type="text" value="#{setupBean.setup.cpf}"
+						required="true" class="inputinfo" validatorMessage="CPF inválido">
+						<f:validateLength maximum="11" minimum="11" />
+						<f:ajax event="blur" render="messages" />
+					</p:inputText>
+				</div>
+
+				<p:outputLabel value="Data de nascimento:" class="p-col-fixed" />
+
+				<div class="p-col inputinfo">
+					<p:inputText id="date" type="date"
+						value="#{setupBean.setup.data_nascimento}" required="true"
+						class="inputinfo" validatorMessage="Data inválida">
+						<f:validateLength maximum="10" minimum="8" />
+						<f:ajax event="blur" render="messages" />
+					</p:inputText>
+				</div>
+
+				<p:outputLabel value="Email:" class="p-col-fixed" />
+
+				<div class="p-col inputinfo">
+					<p:inputText id="email" type="email"
+						value="#{setupBean.setup.email}" required="true" class="inputinfo"
+						validatorMessage="Email inválido">
+						<f:validateRegex pattern="([^.@]+)(\.[^.@]+)*@([^.@]+\.)+([^.@]+)" />
+						<f:ajax event="blur" render="messages" />
+					</p:inputText>
+				</div>
+
+				<p:outputLabel value="Senha:" class="p-col-fixed" />
+
+				<div class="p-col inputinfo">
+					<p:password id="password" value="#{setupBean.setup.senha}"
+						required="true" class="inputinfo" feedback="true"
+						validatorMessage="Senha inválida">
+						<f:validateLength maximum="255" minimum="5" />
+						<f:ajax event="blur" render="messages" />
+					</p:password>
+				</div>
+
+				<p:messages id="messages">
+					<p:autoUpdate />
+				</p:messages>
+
+				<div class="p-col buttoninfo">
+					<p:commandButton value="Enviar" action="#{setupBean.save}"
+						class="btn ui-button-outlined ui-button-secondary">
+						<f:ajax execute="@form" render="messages :setups" />
+					</p:commandButton>
+				</div>
+			</div>
+		</h:form>
+	</ui:define>
+
+</ui:composition>
+
+</html>

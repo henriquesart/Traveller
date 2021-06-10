@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+<ui:composition template="template.xhtml">
+	<ui:define name="content">
+
+		<div class="card infocard">
+			<div class="teste">
+			<h1 class="h1title">Informações</h1>
+			<h4 class="h4title">Nesta página, você consegue monitorar todos os cadastros realizados no sistema.</h4>
+			
+			</div>
+
+			<h:form id="form">
+			<p:outputLabel value="Clientes:" class="p-col-fixed"/>
+				<p:dataTable id="setups" var="setup"
+					value="#{setupBean.setups}" rowKey="#{setup.id}"
+					selectionMode="single">
+
+					<p:column headerText="Nome">
+						<h:outputText value="#{setup.nome}" />
+					</p:column>
+					<p:column headerText="CPF">
+						<h:outputText value="#{setup.cpf}" />
+					</p:column>
+					<p:column headerText="Data de Nascimento">
+						<h:outputText value="#{setup.data_nascimento}" />
+					</p:column>
+					<p:column headerText="Email">
+						<h:outputText value="#{setup.email}" />
+					</p:column>
+					<p:column headerText="Senha">
+						<h:outputText value="#{setup.senha}" />
+					</p:column>
+				</p:dataTable>
+				
+				<p:outputLabel value="Hotéis:" class="p-col-fixed"/>
+				<p:dataTable id="hotels" var="hotel"
+					value="#{hotelBean.hotels}" rowKey="#{hotel.id}"
+					selectionMode="single">
+
+					<p:column headerText="Nome">
+						<h:outputText value="#{hotel.nome}" />
+					</p:column>
+					<p:column headerText="Endereço">
+						<h:outputText value="#{hotel.endereco}" />
+					</p:column>
+					<p:column headerText="Telefone">
+						<h:outputText value="#{hotel.telefone}" />
+					</p:column>
+					<p:column headerText="Email">
+						<h:outputText value="#{hotel.email}" />
+					</p:column>
+					<p:column headerText="Avaliação">
+						<h:outputText value="#{hotel.avalicao}" />
+					</p:column>
+				</p:dataTable>
+				
+				<p:outputLabel value="Reservas:" class="p-col-fixed"/>
+				<p:dataTable id="reservas" var="reserva"
+					value="#{reservaBean.reservas}" rowKey="#{reserva.id}"
+					selectionMode="single">
+
+					<p:column headerText="CheckIn">
+						<h:outputText value="#{reserva.checkIn}" />
+					</p:column>
+					<p:column headerText="CheckOut">
+						<h:outputText value="#{reserva.checkOut}" />
+					</p:column>
+					<p:column headerText="Quarto">
+						<h:outputText value="#{reserva.quarto}" />
+					</p:column>
+					<p:column headerText="Hotel">
+						<h:outputText value="#{reserva.hotel}" />
+					</p:column>
+					<p:column headerText="Nome">
+						<h:outputText value="#{reserva.nome}" />
+					</p:column>
+				</p:dataTable>
+				
+			</h:form>
+
+
+		</div>
+	</ui:define>
+</ui:composition>
+
+
+</html>

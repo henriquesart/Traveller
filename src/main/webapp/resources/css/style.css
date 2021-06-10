@@ -1,0 +1,299 @@
+@charset "ISO-8859-1";
+
+body {
+	background-color: #191919;
+}
+
+#header {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 600px !important;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 30px;
+	background: #ffc800;
+}
+
+body .ui-tabmenu .ui-tabmenu-nav {
+	background: transparent !important;
+	color: rgba(255, 255, 255, .6);
+	grid-template-columns: repeat(auto-fit, minmax(200px, max-content));
+	grid-gap: 0;
+	justify-content: center;
+	padding: initial;
+	transition: .1s ease-in-out;
+}
+
+body .ui-tabmenu .ui-tabmenu-nav .ui-tabmenuitem {
+	background: transparent !important;
+	color: rgba(255, 255, 255, .6);
+	border-bottom: 1px solid rgba(255, 255, 255, .6);
+	list-style-type: none;
+	padding: 5px;
+	width: 200px;
+	transition: .1s ease-in-out;
+}
+
+body .ui-tabmenu .ui-tabmenu-nav .ui-tabmenuitem.ui-state-active, body .ui-tabmenu .ui-tabmenu-nav .ui-tabmenuitem.ui-state-hover
+	{
+	border-color: #ffc800;
+	color: #ffc800;
+	transition: .1s ease-in-out;
+}
+
+body .ui-tabmenu .ui-tabmenu-nav .ui-tabmenuitem.ui-state-active a, body .ui-tabmenu .ui-tabmenu-nav .ui-tabmenuitem.ui-state-active a .ui-icon,
+	body .ui-tabmenu .ui-tabmenu-nav .ui-tabmenuitem.ui-state-hover a, body .ui-tabmenu .ui-tabmenu-nav .ui-tabmenuitem.ui-state-hover a .ui-icon
+	{
+	color: #ffc800;
+	transition: .1s ease-in-out;
+}
+
+body .ui-tabmenu .ui-tabmenu-nav:before {
+	border-bottom: 1px solid #1F1A24;
+}
+
+body .ui-tabmenu .ui-tabmenu-nav .ui-tabmenuitem a {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.infocard {
+	margin: auto;
+	margin-top: 40px;
+	width: 60%;
+	border-radius: 10px;
+	padding: 70px;
+	background-color: #ffc800;
+	border: 3px solid rgba(43, 43, 43, .2);
+}
+
+.infocard2 {
+	margin: auto;
+	margin-top: 40px;
+	width: 100%;
+	padding: 70px;
+}
+
+.ultext a {
+	display: block;
+	color: black;
+	text-decoration: none;
+	margin-left: -40px;
+	text-decoration: underline;
+}
+
+.ultext li {
+	display: block;
+	margin-bottom: 20px;
+}
+
+.ultext li:last-of-type {
+	margin-bottom: 0;
+}
+
+.ultext a:hover {
+	font-weight: bold;
+}
+
+.home-group {
+	background: url(../resources/img/bg-card.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.ptext {
+	color: black;
+	line-height: 150%;
+}
+
+.p1 {
+	font-size: 12px;
+}
+
+.h1title {
+	margin: -20px 0 10px 0;
+	text-align: center;
+	color: black;
+}
+
+.h4title, label {
+	font-weight: 300;
+	color: black;
+	margin: 0 0 30px 0;
+	text-align: center;
+}
+
+.h4title2 {
+	font-weight: 300;
+	color: black;
+	text-align: center;
+	margin: 90px 0 90px 0;
+	color: white;
+	font-size: 50px;
+}
+
+.text {
+	margin: 40px 0 0 0;
+	color: rgba(255, 255, 255, .87);
+	text-align: center;
+	line-height: 1.5;
+}
+
+.btn-group {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: space-around;
+	margin-top: 40px;
+}
+
+.btn {
+	padding: 10px 15px;
+	line-height: 1;
+	border-radius: 5px;
+	border: 1px solid #ffc800;
+	color: rgba(255, 255, 255, .87);
+	text-decoration: none !important;
+	min-width: 190px;
+	text-align: center;
+	transition: .3s ease-in-out;
+	text-transform: capitalize;
+	font-size: 0.9em;
+	font-weight: 600;
+	float: right;
+}
+
+.btn:hover, .btn:focus {
+	background-color: #ffc800;
+	color: #fff;
+	transition: .2s ease-in-out;
+}
+
+.atext {
+	color: grey;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.atext:hover {
+	text-decoration: underline;
+}
+
+.ultext {
+	margin: 30px 0 0 0;
+}
+
+.litext {
+	margin: 0 0 20px 0;
+}
+
+.inputinfo {
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.bottomtext {
+	margin: 0 auto;
+	text-align: center;
+}
+
+/* PAGINA CADASTRO*/
+.label {
+	margin-bottom: 5px;
+	display: block !important;
+	text-align: left;
+}
+
+.ui-inputfield {
+	background: transparent !important;
+	color: black !important;
+	border-radius: 5px !important;
+}
+
+body .ui-inputfield {
+	border: 1px solid black;
+}
+
+.ui-inputfield.ui-state-focus, .ui-inputfield.ui-state-hover {
+	border-color: black !important;
+}
+
+.btn-send {
+	margin-top: 20px !important;
+	width: 100%;
+	background: #ffc800 !important;
+	border: 0 !important;
+	min-height: 45px !important;
+	border-radius: 5px !important;
+}
+
+.btn-send.ui-state-hover, .btn-send.ui-state-focus {
+	background: black !important;
+	color: #ffc800 !important;
+}
+
+/*PAGINA LISTA*/
+.form-group {
+	margin-top: 40px !important;
+}
+
+.lista-group {
+	padding: 40px !important;
+	margin-bottom: 20px !important;
+}
+
+.lista-group .h1 {
+	margin-bottom: 0 !important;
+	margin: 0 auto !important;
+}
+
+#form {
+	max-width: 800px !important;
+	margin: 0 auto !important;
+	border-radius: 10px !important;
+}
+
+.ui-datatable-tablewrapper {
+	overflow: initial !important;
+}
+
+.ui-datatable thead th {
+	background: #151000 !important;
+	color: #ffc800 !important;
+	border: 0 !important;
+}
+
+.ui-datatable .ui-datatable-data>tr {
+	background: transparent !important;
+	color: black !important;
+	border: 1px solid transparent !important;
+	border-radius: 0 0 15px 15px !important;
+}
+
+.ui-datatable .ui-datatable-data>tr.ui-state-focus, .ui-datatable .ui-datatable-data>tr.ui-state-hover
+	{
+	background: rgba(43, 43, 43, .2) !important;
+}
+
+.ui-datatable .ui-datatable-data>tr>td {
+	border: 1px solid black !important;
+	border-width: 1px !important;
+}
+
+.ui-datatable .ui-datatable-data>tr>td:hover {
+	font-weight: bold;
+}
+
+#footer {
+	text-align: center;
+	position: relative;
+	margin-top: 40px;
+	color: #6c757d;
+	width: 100%;
+	font-size: 0.8em;
+}
