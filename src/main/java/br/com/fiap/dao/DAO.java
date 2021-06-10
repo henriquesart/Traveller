@@ -67,6 +67,7 @@ public class DAO<T> {
 
 	public void delete(Setup setup) {
 		manager.getTransaction().begin();
+		setup = manager.merge(setup);
 		manager.remove(setup);
 		manager.flush();
 		manager.getTransaction().commit();
@@ -74,6 +75,7 @@ public class DAO<T> {
 	
 	public void delete2(Hotel hotel) {
 		manager.getTransaction().begin();
+		hotel = manager.merge(hotel);
 		manager.remove(hotel);
 		manager.flush();
 		manager.getTransaction().commit();
@@ -81,6 +83,7 @@ public class DAO<T> {
 	
 	public void delete3(Reserva reserva) {
 		manager.getTransaction().begin();
+		reserva = manager.merge(reserva);
 		manager.remove(reserva);
 		manager.flush();
 		manager.getTransaction().commit();
