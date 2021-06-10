@@ -2,7 +2,7 @@
 
 
 Equipe CTT:
-Martin D. RM85521 / Henrique S. RM82172 / Gustavo G. RM85569 / Iago M. RM84314 / Joao Carlos L. RM85744 / Leonardo A. RM86062 / José D. RM84254
+Martin D. RM85521 / Henrique S. RM82172 / Gustavo G. RM85569 / Iago M. RM84314 / Joao Carlos M. RM85744 / Leonardo A. RM86062 / José D. RM84254
 
 Como testar o Projeto:
 
